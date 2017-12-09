@@ -25,17 +25,19 @@ class DarkSkyAPIClient {
         
         let request = URLRequest(url: url)
         let task = downloader.jsonTaskWith(request: request) { json, error in
-            guard let json = json else {
-                completion(nil, error)
-                return
+            DispatchQueue.main.async {
+                guard let json = json else {
+                    completion(nil, error)
+                    return
+                }
+                
+                guard let jsonDictionary = json["currently"] as? [String: AnyObject], let currentWeather = CurrentWeather(json: jsonDictionary) else {
+                    completion(nil, .jsonParsingFailure)
+                    return
+                }
+                
+                completion(currentWeather, nil)
             }
-            
-            guard let jsonDictionary = json["currently"] as? [String: AnyObject], let currentWeather = CurrentWeather(json: jsonDictionary) else {
-                completion(nil, .jsonPrasingFailure)
-                return
-            }
-            
-            completion(currentWeather, nil)
         }
         
         task.resume()

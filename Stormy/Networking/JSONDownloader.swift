@@ -30,7 +30,7 @@ class JSONDownloader {
             }
             
             if httpResponse.statusCode != 200 {
-                completion(nil, .responseUnsucessful)
+                completion(nil, .responseUnsuccessful)
                 return
             }
             
