@@ -11,6 +11,8 @@
 		4A5779551FDBA7510006C49B /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5779541FDBA7510006C49B /* WeatherIcon.swift */; };
 		4A5779581FDBACB30006C49B /* CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5779571FDBACB30006C49B /* CurrentWeatherViewModel.swift */; };
 		4A57795A1FDBB5480006C49B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5779591FDBB5480006C49B /* API.swift */; };
+		4A57795C1FDBC4E00006C49B /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A57795B1FDBC4E00006C49B /* JSONDownloader.swift */; };
+		4A57795E1FDBC8320006C49B /* DarkSkyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A57795D1FDBC8320006C49B /* DarkSkyError.swift */; };
 		4AF695CD1FDB9DBD00FCFE23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF695CC1FDB9DBD00FCFE23 /* AppDelegate.swift */; };
 		4AF695CF1FDB9DBD00FCFE23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF695CE1FDB9DBD00FCFE23 /* ViewController.swift */; };
 		4AF695D21FDB9DBD00FCFE23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF695D01FDB9DBD00FCFE23 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		4A5779541FDBA7510006C49B /* WeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
 		4A5779571FDBACB30006C49B /* CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
 		4A5779591FDBB5480006C49B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4A57795B1FDBC4E00006C49B /* JSONDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
+		4A57795D1FDBC8320006C49B /* DarkSkyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyError.swift; sourceTree = "<group>"; };
 		4AF695C91FDB9DBD00FCFE23 /* Stormy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stormy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF695CC1FDB9DBD00FCFE23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AF695CE1FDB9DBD00FCFE23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,16 @@
 			path = CurrentWeather;
 			sourceTree = "<group>";
 		};
+		4A57795F1FDBC9170006C49B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4A5779591FDBB5480006C49B /* API.swift */,
+				4A57795D1FDBC8320006C49B /* DarkSkyError.swift */,
+				4A57795B1FDBC4E00006C49B /* JSONDownloader.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		4AF695C01FDB9DBD00FCFE23 = {
 			isa = PBXGroup;
 			children = (
@@ -80,12 +94,12 @@
 		4AF695CB1FDB9DBD00FCFE23 /* Stormy */ = {
 			isa = PBXGroup;
 			children = (
-				4A5779591FDBB5480006C49B /* API.swift */,
+				4AF695D31FDB9DBD00FCFE23 /* Assets.xcassets */,
 				4A5779511FDBA59A0006C49B /* Model */,
+				4A57795F1FDBC9170006C49B /* Networking */,
 				4AF695CC1FDB9DBD00FCFE23 /* AppDelegate.swift */,
 				4AF695CE1FDB9DBD00FCFE23 /* ViewController.swift */,
 				4AF695D01FDB9DBD00FCFE23 /* Main.storyboard */,
-				4AF695D31FDB9DBD00FCFE23 /* Assets.xcassets */,
 				4AF695D51FDB9DBD00FCFE23 /* LaunchScreen.storyboard */,
 				4AF695D81FDB9DBD00FCFE23 /* Info.plist */,
 			);
@@ -164,6 +178,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A57795E1FDBC8320006C49B /* DarkSkyError.swift in Sources */,
+				4A57795C1FDBC4E00006C49B /* JSONDownloader.swift in Sources */,
 				4AF695CF1FDB9DBD00FCFE23 /* ViewController.swift in Sources */,
 				4A5779551FDBA7510006C49B /* WeatherIcon.swift in Sources */,
 				4A5779581FDBACB30006C49B /* CurrentWeatherViewModel.swift in Sources */,
