@@ -58,6 +58,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1p-yQ-YI3">
                                 <rect key="frame" x="166" y="52" width="43" height="43"/>
                                 <state key="normal" image="refresh"/>
+                                <connections>
+                                    <action selector="refreshButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SfI-tI-7tO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cH-un-mE1">
                                 <rect key="frame" x="248.5" y="433.5" width="38.5" height="20.5"/>

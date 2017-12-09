@@ -9,15 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // MARK: Weather information UI elements
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var currentHumidityLabel: UILabel!
     @IBOutlet weak var currentPrecipitationLabel: UILabel!
     @IBOutlet weak var currentWeatherIcon: UIImageView!
     @IBOutlet weak var currentSummaryLabel: UILabel!
     
+    // MARK: Refresh and activiy elements
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    // MARK: Model variables
     let client = DarkSkyAPIClient()
     let locationCoordinate = Coordinate(latitude: 37.8267, longitude: -122.4233)
     
@@ -27,8 +30,19 @@ class ViewController: UIViewController {
         displayWeather(for: locationCoordinate)
     }
     
+    @IBAction func refreshButtonTapped(_ sender: Any) {
+        displayWeather(for: locationCoordinate)
+    }
+    
+    // MARK: UI display methods
+    
     func displayWeather(for coordinate: Coordinate) {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
         client.getCurrentWeather(at: locationCoordinate) { [unowned self] currentWeather, error in
+            self.activityIndicator.stopAnimating()
+            
             if error != nil {
                 self.displayAlertWith(title: "Error Occurred!", message: "Sorry, an error occurred!")
                 return
