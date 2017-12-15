@@ -8,5 +8,5 @@
 
 class DarkSkyAPI {
     // Include your DarkSky API key here
-    static let API_KEY = ""
+    static let apiKey = ""
 }

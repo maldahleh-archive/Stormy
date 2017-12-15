@@ -12,7 +12,7 @@ typealias CurrentWeatherCompletionHandler = (CurrentWeather?, DarkSkyError?) -> 
 
 class DarkSkyAPIClient {
     lazy var baseURL: URL = {
-        return URL(string: "https://api.darksky.net/forecast/\(DarkSkyAPI.API_KEY)/")!
+        return URL(string: "https://api.darksky.net/forecast/\(DarkSkyAPI.apiKey)/")!
     }()
     
     let downloader = JSONDownloader()

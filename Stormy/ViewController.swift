@@ -27,6 +27,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if DarkSkyAPI.apiKey.isEmpty {
+            fatalError("Please include your API key")
+        }
+        
         displayWeather(for: locationCoordinate)
     }
     
